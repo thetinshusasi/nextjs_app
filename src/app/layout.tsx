@@ -12,7 +12,13 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+
+      <body suppressHydrationWarning={true} >
+        <nav>
+          <h1>global Nav bar</h1>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }
