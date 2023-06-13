@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar'
 import './globals.css'
 
 export default function RootLayout({
@@ -13,10 +14,8 @@ export default function RootLayout({
       */}
       <head />
 
-      <body suppressHydrationWarning={true} >
-        <nav>
-          <h1>global Nav bar</h1>
-        </nav>
+      <body suppressHydrationWarning={true} className='bg-slate-800'>
+        <Navbar />
         {children}
       </body>
     </html>

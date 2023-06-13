@@ -12,9 +12,11 @@ export const metadata: Metadata = {
 }
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={inter.className}>
       hello world
       <Link href="/about"> Go to about page</Link>
+      <Link href="/users"> Go to User page</Link>
+
     </main>
   )
 }

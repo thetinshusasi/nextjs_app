@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 }
 
 export default function About() {
-    throw new Error("shit happened")
     return (
         <>
             <div>about page</div>
