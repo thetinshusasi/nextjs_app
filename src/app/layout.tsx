@@ -1,5 +1,10 @@
-import Navbar from './components/Navbar'
 import './globals.css'
+import Navbar from "./components/Navbar"
+
+export const metadata = {
+  title: 'Next Todos',
+  description: 'Created for practice',
+}
 
 export default function RootLayout({
   children,
@@ -8,15 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-
-      <body suppressHydrationWarning={true} className='bg-slate-800'>
+      <body className="dark:bg-slate-800">
         <Navbar />
-        {children}
+        <main className="mx-auto max-w-xl p-4 bg-stone-200 min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   )

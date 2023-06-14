@@ -1,22 +1,15 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-import Link from 'next/link'
+import TodoList from "./components/TodoList"
+import AddTodo from "./components/AddTodo"
 
-const inter = Inter({ subsets: ['latin'] })
-import { Metadata } from 'next'
+export const revalidate = 0
 
-export const metadata: Metadata = {
-  title: 'Main Page',
-  description: '...',
-}
 export default function Home() {
-  return (
-    <main className={inter.className}>
-      hello world
-      <Link href="/about"> Go to about page</Link>
-      <Link href="/users"> Go to User page</Link>
 
-    </main>
+  return (
+    <>
+      <AddTodo />
+      {/* @ts-expect-error Server Component */}
+      <TodoList />
+    </>
   )
 }
